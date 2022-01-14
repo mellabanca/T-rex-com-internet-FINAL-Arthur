@@ -111,9 +111,10 @@ if(grupodeobs.isTouching(trex)){
     grupodeobs.setVelocityXEach(0);
     grupodenuvens.setLifetimeEach(-1);
     grupodeobs.setLifetimeEach(-1);
-    if(mousePressedOver(resetar)){
+    if(mousePressedOver(resetar) || touches.length > 0){
         //console.log("REINICIE O JOGO!");
         reset();
+        touches = [];
     }
 }
 //Impede que o T-rex caia da tela
